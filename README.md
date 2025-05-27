@@ -52,3 +52,42 @@ Example: In a banking app, Kubernetes makes sure the login system and transactio
 
 ##  Screenshot or logs showing the running pod and node placement
 ![image](https://github.com/user-attachments/assets/034bfadf-b42f-4566-b5b9-62b42149c996)
+
+
+
+# Day3 Readme.md
+
+## Screenshot of working endpoint via Ingress (use Minikube ingress if on local)
+
+![image](https://github.com/user-attachments/assets/cdbbc3bf-d698-4a54-aeb9-b2b0e97b7be2)
+
+
+## How would you expose an internal microservice (e.g., user-auth) differently than a public-facing frontend in a Kubernetes-based product?
+
+In a Kubernetes-based product, internal microservices (e.g., user-auth) and public-facing frontends are exposed differently to maintain security, manage traffic efficiently, and simplify networking.
+Internal Microservices (e.g., user-auth)
+These services typically do not need to be accessed directly from outside the cluster. Instead, they are exposed only within the Kubernetes cluster or a private network. Common approaches include:
+Using ClusterIP services (default), which are only accessible inside the cluster.
+Accessing them through other microservices or APIs via service discovery or internal DNS.
+Optionally using Network Policies to restrict which pods or namespaces can communicate with them.
+
+
+## Why might a product use Ingress instead of directly exposing each microservice via LoadBalancer?
+
+
+Using an Ingress to expose services instead of creating a LoadBalancer for each microservice is generally preferred because:
+Cost Efficiency
+Cloud providers charge for each LoadBalancer resource. Using one Ingress LoadBalancer to route traffic to many services reduces costs.
+Centralized Traffic Management
+Ingress controllers provide a single entry point for HTTP/HTTPS traffic. This simplifies configuration for SSL/TLS termination, URL path-based routing, and host-based routing.
+Improved Security
+TLS certificates and security policies can be centrally managed at the Ingress level rather than on every LoadBalancer service.
+Simplified DNS and Networking
+One external IP or hostname can be used for multiple services by routing traffic internally based on paths or hostnames.
+Advanced Features
+Ingress controllers often support rate limiting, authentication, retries, and can integrate with API gateways or service meshes for more advanced traffic control.
+
+
+
+
+ 
