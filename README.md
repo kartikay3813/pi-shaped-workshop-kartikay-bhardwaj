@@ -90,4 +90,13 @@ Ingress controllers often support rate limiting, authentication, retries, and ca
 
 
 
+# Day4 Readme.md
+
+Screenshot of Helm install and upgrade commands
+![image](https://github.com/user-attachments/assets/f10df980-79b3-4723-a23a-0cdea3164fa5)
+
+
+
+
+
  
