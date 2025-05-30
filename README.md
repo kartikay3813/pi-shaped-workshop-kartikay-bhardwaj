@@ -92,6 +92,14 @@ Ingress controllers often support rate limiting, authentication, retries, and ca
 
 # Day4 Readme.md
 
+
+## Why is Helm important for managing configuration across different environments in a real-world product (e.g., dev, staging, prod)?
+Helm allowed us to use distinct values.yaml files for each environment (dev, staging, and prod) and define reusable templates. To put it briefly, Helm enables us to produce a single chart and use distinct values-*.yaml files for every environment rather than keeping separate yaml files for each environment.
+varied contexts frequently call for varied configurations in real-world situations, such as resource constraints, picture tags, and replica counts.
+
+## How does Helm simplify deployment rollback during a production incident?
+Helm maintains a record of every release. The command helm rollback'release-name' allows us to rapidly revert to a previous stable version in the event that a deployment fails. As a result, incident recovery is safer and quicker.
+
 Screenshot of Helm install and upgrade commands
 ![image](https://github.com/user-attachments/assets/f10df980-79b3-4723-a23a-0cdea3164fa5)
 
