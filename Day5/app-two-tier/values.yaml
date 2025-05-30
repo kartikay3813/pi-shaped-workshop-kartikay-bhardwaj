@@ -1,0 +1,13 @@
+frontend:
+  image:
+    repository: kartikay1181/frontend-app
+    tag: latest
+  service:
+    port: 80
+
+backend:
+  image:
+    repository: kartikay1181/backend-app
+    tag: latest
+  service:
+    port: 8080
